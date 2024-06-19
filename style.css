@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5vmin;
+    width: 60vmin;
+    height: 60vmin;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(181, 12, 12, 0.3);
+    font-size: 8vmin;
+    background: #fdf8f8;
+    color: black;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 1.5rem rgba(181, 12, 12, 0.5);
+}
+
+#reset-btn, #new-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#reset-btn {
+    background-color: rgb(246, 88, 109);
+    margin-bottom: 20px;
+}
+
+#reset-btn:hover {
+    background-color: rgb(225, 78, 98);
+    transform: scale(1.05);
+}
+
+#new-btn {
+    background-color: rgb(96, 144, 255);
+}
+
+#new-btn:hover {
+    background-color: rgb(86, 134, 245);
+    transform: scale(1.05);
+}
+
+.msg-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.msg-container.hide {
+    display: none;
+}
+
+#msg {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
